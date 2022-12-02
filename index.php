@@ -18,3 +18,4 @@ $loader->setTempDirectory(__DIR__ . '/temp');
 $loader->register();
 
 Runner::run();
+Tester::test();

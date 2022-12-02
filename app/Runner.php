@@ -17,6 +17,14 @@ class Runner
                 CalorieCounting\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 2: Rock Paper Scissors ---',
+            self::LINK => 'https://adventofcode.com/2022/day/2',
+            self::CLASSNAMES => [
+                RockPaperScissors\PartOne::class,
+                RockPaperScissors\PartTwo::class,
+            ],
+        ],
     ];
 
 
@@ -37,11 +45,11 @@ class Runner
     private static function runOne(int $day): void
     {
         if ($day < 1 || $day > 25) {
-            self::exit('advent overflow');
+            self::exit("Day $day? Advent overflow?");
         }
 
         if (!isset(self::PUZZLES_SOLVED[$day])) {
-            self::exit('maybe later');
+            self::exit("Day $day? Maybe later...");
         }
 
         $puzzleSolved = self::PUZZLES_SOLVED[$day];
@@ -50,11 +58,11 @@ class Runner
         echo $puzzleSolved[self::LINK] . "\n";
 
         if (isset($puzzleSolved[self::CLASSNAMES][self::PART_ONE])) {
-            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_ONE], 'Part one answer:');
+            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_ONE], 'Part one');
         }
 
         if (isset($puzzleSolved[self::CLASSNAMES][self::PART_TWO])) {
-            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_TWO], 'Part two answer:');
+            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_TWO], 'Part two');
         }
     }
 
@@ -67,17 +75,15 @@ class Runner
         $class = new $classname;
         assert($class instanceof Solution);
 
-        echo "$title ";
+        echo "$title answer: ";
         $class->run();
         echo "\n";
     }
 
 
-    private static function exit(?string $message = null): void
+    private static function exit(string $message): void
     {
-        if ($message !== null) {
-            echo "$message\n";
-        }
+        echo "$message\n";
 
         exit;
     }
