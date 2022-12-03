@@ -4,22 +4,31 @@ class Tester
 {
     private const NAME = 'name';
     private const EXPECTED_ANSWERS = 'expectedAnswers';
-    private const PART_ONE = 0;
-    private const PART_TWO = 1;
+    private const PART_ONE = 'Part one';
+    private const PART_TWO = 'Part two';
 
     private const TESTS = [
         1 => [
             self::NAME => '--- Day 1: Calorie Counting ---',
             self::EXPECTED_ANSWERS => [
-                CalorieCounting\PartOne::class => '69501',
-                CalorieCounting\PartTwo::class => '202346',
+                self::PART_ONE => [CalorieCounting\PartOne::class => '69501'],
+                self::PART_TWO => [CalorieCounting\PartTwo::class => '202346'],
             ],
         ],
         [
             self::NAME => '--- Day 2: Rock Paper Scissors ---',
             self::EXPECTED_ANSWERS => [
-                RockPaperScissors\PartOne::class => '11906',
-                RockPaperScissors\PartTwo::class => '11186',
+                self::PART_ONE => [RockPaperScissors\PartOne::class => '11906'],
+                self::PART_TWO => [RockPaperScissors\PartTwo::class => '11186'],
+            ],
+        ],
+        [
+            self::NAME => '--- Day 3: Rucksack Reorganization ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [RucksackReorganization\PartOne::class => '8139'],
+                self::PART_TWO => [RucksackReorganization\PartTwo::class => '2668'],
+                'Part one (strpos)' => [RucksackReorganization\PartOneStrpos::class => '8139'],
+                'Part two (strpos)' => [RucksackReorganization\PartTwoStrpos::class => '2668'],
             ],
         ],
     ];
@@ -49,15 +58,8 @@ class Tester
 
         echo $test[self::NAME] . "\n";
 
-        $classnames = array_keys($test[self::EXPECTED_ANSWERS]);
-        $expectedAnswers = array_values($test[self::EXPECTED_ANSWERS]);
-
-        if (isset($classnames[self::PART_ONE])) {
-            self::echoResult($classnames[self::PART_ONE], $expectedAnswers[self::PART_ONE], 'Part one');
-        }
-
-        if (isset($classnames[self::PART_TWO])) {
-            self::echoResult($classnames[self::PART_TWO], $expectedAnswers[self::PART_TWO], 'Part two');
+        foreach ($test[self::EXPECTED_ANSWERS] as $title => $expectedAnswer) {
+            self::echoResult($title, key($expectedAnswer), current($expectedAnswer));
         }
     }
 
@@ -65,7 +67,7 @@ class Tester
     /**
      * @param class-string $classname
      */
-    private static function echoResult(string $classname, string $expectedAnswer, string $title): void
+    private static function echoResult(string $title, string $classname, string $expectedAnswer): void
     {
         $class = new $classname;
         assert($class instanceof Solution);

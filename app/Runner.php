@@ -5,24 +5,34 @@ class Runner
     private const NAME = 'name';
     private const LINK = 'link';
     private const CLASSNAMES = 'classnames';
-    private const PART_ONE = 0;
-    private const PART_TWO = 1;
+    private const PART_ONE = 'Part one';
+    private const PART_TWO = 'Part two';
 
     private const PUZZLES_SOLVED = [
         1 => [
             self::NAME => '--- Day 1: Calorie Counting ---',
             self::LINK => 'https://adventofcode.com/2022/day/1',
             self::CLASSNAMES => [
-                CalorieCounting\PartOne::class,
-                CalorieCounting\PartTwo::class,
+                self::PART_ONE => CalorieCounting\PartOne::class,
+                self::PART_TWO => CalorieCounting\PartTwo::class,
             ],
         ],
         [
             self::NAME => '--- Day 2: Rock Paper Scissors ---',
             self::LINK => 'https://adventofcode.com/2022/day/2',
             self::CLASSNAMES => [
-                RockPaperScissors\PartOne::class,
-                RockPaperScissors\PartTwo::class,
+                self::PART_ONE => RockPaperScissors\PartOne::class,
+                self::PART_TWO => RockPaperScissors\PartTwo::class,
+            ],
+        ],
+        [
+            self::NAME => '--- Day 3: Rucksack Reorganization ---',
+            self::LINK => 'https://adventofcode.com/2022/day/3',
+            self::CLASSNAMES => [
+                self::PART_ONE => RucksackReorganization\PartOne::class,
+                self::PART_TWO => RucksackReorganization\PartTwo::class,
+                'Part one (strpos)' => RucksackReorganization\PartOneStrpos::class,
+                'Part two (strpos)' => RucksackReorganization\PartTwoStrpos::class,
             ],
         ],
     ];
@@ -57,12 +67,8 @@ class Runner
         echo $puzzleSolved[self::NAME] . "\n";
         echo $puzzleSolved[self::LINK] . "\n";
 
-        if (isset($puzzleSolved[self::CLASSNAMES][self::PART_ONE])) {
-            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_ONE], 'Part one');
-        }
-
-        if (isset($puzzleSolved[self::CLASSNAMES][self::PART_TWO])) {
-            self::echoAnswer($puzzleSolved[self::CLASSNAMES][self::PART_TWO], 'Part two');
+        foreach ($puzzleSolved[self::CLASSNAMES] as $title => $classname) {
+            self::echoAnswer($title, $classname);
         }
     }
 
@@ -70,7 +76,7 @@ class Runner
     /**
      * @param class-string $classname
      */
-    private static function echoAnswer(string $classname, string $title): void
+    private static function echoAnswer(string $title, string $classname): void
     {
         $class = new $classname;
         assert($class instanceof Solution);
