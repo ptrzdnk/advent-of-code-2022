@@ -31,6 +31,13 @@ class Tester
                 'Part two (strpos)' => [RucksackReorganization\PartTwoStrpos::class => '2668'],
             ],
         ],
+        [
+            self::NAME => '--- Day 4: Camp Cleanup ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [CampCleanup\PartOne::class => '562'],
+                self::PART_TWO => [CampCleanup\PartTwo::class => '924'],
+            ],
+        ],
     ];
 
 

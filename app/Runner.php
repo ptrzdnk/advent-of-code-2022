@@ -35,6 +35,14 @@ class Runner
                 'Part two (strpos)' => RucksackReorganization\PartTwoStrpos::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 4: Camp Cleanup ---',
+            self::LINK => 'https://adventofcode.com/2022/day/4',
+            self::CLASSNAMES => [
+                self::PART_ONE => CampCleanup\PartOne::class,
+                self::PART_TWO => CampCleanup\PartTwo::class,
+            ],
+        ],
     ];
 
 
