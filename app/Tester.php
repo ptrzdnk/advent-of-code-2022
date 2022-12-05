@@ -38,6 +38,13 @@ class Tester
                 self::PART_TWO => [CampCleanup\PartTwo::class => '924'],
             ],
         ],
+        [
+            self::NAME => '--- Day 5: Supply Stacks ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [SupplyStacks\PartOne::class => 'TQRFCBSJJ'],
+                self::PART_TWO => [SupplyStacks\PartTwo::class => 'RMHFJNVFP'],
+            ],
+        ],
     ];
 
 

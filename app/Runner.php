@@ -43,6 +43,14 @@ class Runner
                 self::PART_TWO => CampCleanup\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 5: Supply Stacks ---',
+            self::LINK => 'https://adventofcode.com/2022/day/5',
+            self::CLASSNAMES => [
+                self::PART_ONE => SupplyStacks\PartOne::class,
+                self::PART_TWO => SupplyStacks\PartTwo::class,
+            ],
+        ],
     ];
 
 
