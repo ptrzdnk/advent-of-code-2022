@@ -45,6 +45,13 @@ class Tester
                 self::PART_TWO => [SupplyStacks\PartTwo::class => 'RMHFJNVFP'],
             ],
         ],
+        [
+            self::NAME => '--- Day 6: Tuning Trouble ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [TuningTrouble\PartOne::class => '1134'],
+                self::PART_TWO => [TuningTrouble\PartTwo::class => '2263'],
+            ],
+        ],
     ];
 
 

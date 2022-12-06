@@ -51,6 +51,14 @@ class Runner
                 self::PART_TWO => SupplyStacks\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 6: Tuning Trouble ---',
+            self::LINK => 'https://adventofcode.com/2022/day/6',
+            self::CLASSNAMES => [
+                self::PART_ONE => TuningTrouble\PartOne::class,
+                self::PART_TWO => TuningTrouble\PartTwo::class,
+            ],
+        ],
     ];
 
 
