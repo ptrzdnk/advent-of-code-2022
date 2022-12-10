@@ -52,6 +52,13 @@ class Tester
                 self::PART_TWO => [TuningTrouble\PartTwo::class => '2263'],
             ],
         ],
+        [
+            self::NAME => '--- Day 7: No Space Left On Device ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [NoSpaceLeftOnDevice\PartOne::class => '1844187'],
+                self::PART_TWO => [NoSpaceLeftOnDevice\PartTwo::class => '4978279'],
+            ],
+        ],
     ];
 
 

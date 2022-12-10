@@ -59,6 +59,14 @@ class Runner
                 self::PART_TWO => TuningTrouble\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 7: No Space Left On Device ---',
+            self::LINK => 'https://adventofcode.com/2022/day/7',
+            self::CLASSNAMES => [
+                self::PART_ONE => NoSpaceLeftOnDevice\PartOne::class,
+                self::PART_TWO => NoSpaceLeftOnDevice\PartTwo::class,
+            ],
+        ],
     ];
 
 
