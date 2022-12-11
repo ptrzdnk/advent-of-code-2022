@@ -66,6 +66,13 @@ class Tester
                 self::PART_TWO => [TreetopTreeHouse\PartTwo::class => '527340'],
             ],
         ],
+        [
+            self::NAME => '--- Day 9: Rope Bridge ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [RopeBridge\PartOne::class => '6026'],
+                self::PART_TWO => [RopeBridge\PartTwo::class => '2273'],
+            ],
+        ],
     ];
 
 

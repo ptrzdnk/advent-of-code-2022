@@ -75,6 +75,14 @@ class Runner
                 self::PART_TWO => TreetopTreeHouse\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 9: Rope Bridge ---',
+            self::LINK => 'https://adventofcode.com/2022/day/9',
+            self::CLASSNAMES => [
+                self::PART_ONE => RopeBridge\PartOne::class,
+                self::PART_TWO => RopeBridge\PartTwo::class,
+            ],
+        ],
     ];
 
 
