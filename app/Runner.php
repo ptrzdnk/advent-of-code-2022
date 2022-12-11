@@ -67,6 +67,14 @@ class Runner
                 self::PART_TWO => NoSpaceLeftOnDevice\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 8: Treetop Tree House ---',
+            self::LINK => 'https://adventofcode.com/2022/day/8',
+            self::CLASSNAMES => [
+                self::PART_ONE => TreetopTreeHouse\PartOne::class,
+                self::PART_TWO => TreetopTreeHouse\PartTwo::class,
+            ],
+        ],
     ];
 
 

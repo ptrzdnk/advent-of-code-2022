@@ -59,6 +59,13 @@ class Tester
                 self::PART_TWO => [NoSpaceLeftOnDevice\PartTwo::class => '4978279'],
             ],
         ],
+        [
+            self::NAME => '--- Day 8: Treetop Tree House ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [TreetopTreeHouse\PartOne::class => '1854'],
+                self::PART_TWO => [TreetopTreeHouse\PartTwo::class => '527340'],
+            ],
+        ],
     ];
 
 
