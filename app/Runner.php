@@ -83,6 +83,14 @@ class Runner
                 self::PART_TWO => RopeBridge\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 10: Cathode-Ray Tube ---',
+            self::LINK => 'https://adventofcode.com/2022/day/10',
+            self::CLASSNAMES => [
+                self::PART_ONE => CathodeRayTube\PartOne::class,
+                self::PART_TWO => CathodeRayTube\PartTwo::class,
+            ],
+        ],
     ];
 
 

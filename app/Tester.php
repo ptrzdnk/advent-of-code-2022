@@ -73,6 +73,13 @@ class Tester
                 self::PART_TWO => [RopeBridge\PartTwo::class => '2273'],
             ],
         ],
+        [
+            self::NAME => '--- Day 10: Cathode-Ray Tube ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [CathodeRayTube\PartOne::class => '14820'],
+                self::PART_TWO => [CathodeRayTube\PartTwo::class => "\n###..####.####.#..#.####.####.#..#..##.#\n#..#....#.#....#.#..#....#....#..#.#..#.\n#..#...#..###..##...###..###..####.#..#.\n###...#...#....#.#..#....#....#..#.#####\n#.#..#....#....#.#..#....#....#..#.#..#.\n#..#.####.####.#..#.####.#....#..#.#..#."],
+            ],
+        ],
     ];
 
 
