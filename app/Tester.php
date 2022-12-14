@@ -80,6 +80,13 @@ class Tester
                 self::PART_TWO => [CathodeRayTube\PartTwo::class => "\n###..####.####.#..#.####.####.#..#..##.#\n#..#....#.#....#.#..#....#....#..#.#..#.\n#..#...#..###..##...###..###..####.#..#.\n###...#...#....#.#..#....#....#..#.#####\n#.#..#....#....#.#..#....#....#..#.#..#.\n#..#.####.####.#..#.####.#....#..#.#..#."],
             ],
         ],
+        [
+            self::NAME => '--- Day 11: Monkey in the Middle ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [MonkeyInTheMiddle\PartOne::class => '58794'],
+                self::PART_TWO => [MonkeyInTheMiddle\PartTwo::class => '20151213744'],
+            ],
+        ],
     ];
 
 

@@ -91,6 +91,14 @@ class Runner
                 self::PART_TWO => CathodeRayTube\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 11: Monkey in the Middle ---',
+            self::LINK => 'https://adventofcode.com/2022/day/11',
+            self::CLASSNAMES => [
+                self::PART_ONE => MonkeyInTheMiddle\PartOne::class,
+                self::PART_TWO => MonkeyInTheMiddle\PartTwo::class,
+            ],
+        ],
     ];
 
 
