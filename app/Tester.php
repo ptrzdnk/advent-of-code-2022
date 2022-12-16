@@ -94,6 +94,13 @@ class Tester
                 self::PART_TWO => [HillClimbingAlgorithm\PartTwo::class => '388'],
             ],
         ],
+        [
+            self::NAME => '--- Day 13: Distress Signal ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [DistressSignal\PartOne::class => '6428'],
+                self::PART_TWO => [DistressSignal\PartTwo::class => '22464'],
+            ],
+        ],
     ];
 
 

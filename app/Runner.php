@@ -107,6 +107,14 @@ class Runner
                 self::PART_TWO => HillClimbingAlgorithm\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 13: Distress Signal ---',
+            self::LINK => 'https://adventofcode.com/2022/day/13',
+            self::CLASSNAMES => [
+                self::PART_ONE => DistressSignal\PartOne::class,
+                self::PART_TWO => DistressSignal\PartTwo::class,
+            ],
+        ],
     ];
 
 
