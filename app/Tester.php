@@ -87,6 +87,13 @@ class Tester
                 self::PART_TWO => [MonkeyInTheMiddle\PartTwo::class => '20151213744'],
             ],
         ],
+        [
+            self::NAME => '--- Day 12: Hill Climbing Algorithm ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [HillClimbingAlgorithm\PartOne::class => '394'],
+                self::PART_TWO => [HillClimbingAlgorithm\PartTwo::class => '388'],
+            ],
+        ],
     ];
 
 

@@ -99,6 +99,14 @@ class Runner
                 self::PART_TWO => MonkeyInTheMiddle\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 12: Hill Climbing Algorithm ---',
+            self::LINK => 'https://adventofcode.com/2022/day/12',
+            self::CLASSNAMES => [
+                self::PART_ONE => HillClimbingAlgorithm\PartOne::class,
+                self::PART_TWO => HillClimbingAlgorithm\PartTwo::class,
+            ],
+        ],
     ];
 
 
