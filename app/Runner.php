@@ -123,6 +123,14 @@ class Runner
                 self::PART_TWO => RegolithReservoir\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 15: Beacon Exclusion Zone ---',
+            self::LINK => 'https://adventofcode.com/2022/day/15',
+            self::CLASSNAMES => [
+                self::PART_ONE => BeaconExclusionZone\PartOne::class,
+                self::PART_TWO => BeaconExclusionZone\PartTwo::class,
+            ],
+        ],
     ];
 
 

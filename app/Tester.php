@@ -108,6 +108,13 @@ class Tester
                 self::PART_TWO => [RegolithReservoir\PartTwo::class => '27194'],
             ],
         ],
+        [
+            self::NAME => '--- Day 15: Beacon Exclusion Zone ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [BeaconExclusionZone\PartOne::class => '4883971'],
+                self::PART_TWO => [BeaconExclusionZone\PartTwo::class => '12691026767556'],
+            ],
+        ],
     ];
 
 
