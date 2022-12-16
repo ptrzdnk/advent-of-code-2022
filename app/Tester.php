@@ -101,6 +101,13 @@ class Tester
                 self::PART_TWO => [DistressSignal\PartTwo::class => '22464'],
             ],
         ],
+        [
+            self::NAME => '--- Day 14: Regolith Reservoir ---',
+            self::EXPECTED_ANSWERS => [
+                self::PART_ONE => [RegolithReservoir\PartOne::class => '610'],
+                self::PART_TWO => [RegolithReservoir\PartTwo::class => '27194'],
+            ],
+        ],
     ];
 
 

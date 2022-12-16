@@ -115,6 +115,14 @@ class Runner
                 self::PART_TWO => DistressSignal\PartTwo::class,
             ],
         ],
+        [
+            self::NAME => '--- Day 14: Regolith Reservoir ---',
+            self::LINK => 'https://adventofcode.com/2022/day/14',
+            self::CLASSNAMES => [
+                self::PART_ONE => RegolithReservoir\PartOne::class,
+                self::PART_TWO => RegolithReservoir\PartTwo::class,
+            ],
+        ],
     ];
 
 
